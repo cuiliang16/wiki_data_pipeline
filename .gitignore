@@ -1,0 +1,37 @@
+# Python virtual environments
+venv/
+.env/
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+logs/
+
+# Checkpoints, queues, temp, and backup files
+*.checkpoint
+*.queue
+*.tmp
+*.bak
+
+# Test outputs
+test_output_production.json
+
+# Environment variable files
+.env
+*.env
+
+# OS and editor files
+.DS_Store
+.vscode/
+*.swp
+*.swo
+
+# Azure local cache
+.azure/
+
+# Ignore local config overrides
+config/*.local.yaml 

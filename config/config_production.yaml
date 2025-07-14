@@ -1,0 +1,39 @@
+azure:
+  connection_string: "your_connection_string"
+  container_name: "wikipedia-data-production"
+  batch_size: 1000
+
+naming:
+  file_pattern: "article_{index:06d}.json"
+  directory_pattern: "batch_{batch_num:03d}"
+
+api:
+  base_url: "https://en.wikipedia.org/w/api.php"
+  user_agent: "WikipediaDataPipeline/1.0"
+  max_retries: 3
+  initial_delay: 1
+  max_delay: 60
+
+# Production environment settings
+production:
+  use_mwclient: true
+  use_wikitextparser: true
+  fallback_to_basic_api: true
+  enhanced_metadata: true
+  content_formats:
+    - "wikitext"
+    - "parsed_content"
+    - "plain_text"
+
+logging:
+  level: "INFO"
+  main_log: "logs/production_pipeline.log"
+  error_log: "logs/production_errors.log"
+  max_file_size: 10485760  # 10MB
+  backup_count: 5
+
+processing:
+  batch_size: 1000
+  checkpoint_interval: 100
+  queue_persistence: true
+  enable_resume: true 

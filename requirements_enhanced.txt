@@ -1,0 +1,15 @@
+# Core dependencies
+requests==2.31.0
+azure-storage-blob==12.19.0
+python-dotenv==1.0.0
+PyYAML==6.0.1
+urllib3==2.0.7
+
+# Enhanced Wikipedia libraries
+mwclient==1.9.2
+wikipedia==1.4.0
+wikitextparser==0.52.4
+
+# Optional: Additional parsing libraries
+beautifulsoup4==4.12.2
+lxml==4.9.3 
